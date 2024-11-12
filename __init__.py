@@ -1,0 +1,1 @@
+from .RandomBooru import RandomBooruInvocation
