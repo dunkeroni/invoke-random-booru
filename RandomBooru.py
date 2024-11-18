@@ -1,15 +1,9 @@
-from PIL import ImageDraw, ImageFont
-
 from invokeai.invocation_api import (
-    ImageField,
-    ImageOutput,
-    ColorField,
     BaseInvocation,
     InputField,
     InvocationContext,
     invocation,
     StringOutput,
-    UIType,
     UIComponent,
 )
 
@@ -46,7 +40,7 @@ class RandomBooruInvocation(BaseInvocation):
     )
 
     def request_random_booru_tags(self, limit: int) -> str:
-        domain = "https://testbooru.donmai.us/" #"https://danbooru.donmai.us"
+        domain = "https://danbooru.donmai.us" #"https://testbooru.donmai.us/"
         endpoint = "/posts/random.json"
         url = domain + endpoint
         params = {}
